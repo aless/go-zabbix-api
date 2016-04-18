@@ -34,7 +34,6 @@ type AckType struct {
 	Alias   string `json:"alias"`
 }
 
-
 // Event object
 // see https://www.zabbix.com/documentation/2.0/manual/appendix/api/event/definitions
 type Event struct {
@@ -44,7 +43,7 @@ type Event struct {
 	ObjectId     int64      `json:"objectid,string"`
 	Clock        int64      `json:"clock,string"`
 	Value        int64      `json:"value,string"`
-	AckNowLedge  AckType    `json:"acknowledges"`
+	AckNowLedge  []AckType  `json:"acknowledges"`
 	Ns           int64      `json:"ns,string"`
 	ValueChanged int64      `json:"value_changed,string"`
 }
